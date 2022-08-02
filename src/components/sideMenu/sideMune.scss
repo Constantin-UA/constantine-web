@@ -1,0 +1,50 @@
+@import '../../style/variables.scss';
+.sideMenu {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	height: 35px;
+	z-index: 1;
+}
+.menu {
+	&__list {
+		list-style-type: none;
+		padding-left: 35px;
+	}
+	&__link {
+		position: relative;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 36px;
+		margin-bottom: 15px;
+	}
+	&__link:before {
+		content: '';
+		position: absolute;
+		left: -35px;
+		top: 10px;
+		height: 15px;
+		width: 15px;
+		border: 1px solid #000;
+		border-radius: 100%;
+		transition: all 0.6s;
+	}
+	&__link:hover:before {
+		background: #fff;
+	}
+	&__link a {
+		color: #fff;
+		text-decoration: none;
+	}
+	&__social {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90px;
+		height: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
