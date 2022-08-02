@@ -1,0 +1,47 @@
+@import '../../style/variables.scss';
+
+.promo {
+	min-height: 100vh;
+	position: relative;
+	background: url(../../resources/pictures/main_bg_revers.jpg) no-repeat 50% / cover;
+	padding-top: 200px;
+	&__title {
+		width: 535px;
+		margin-top: 10px;
+		color: #fff;
+		text-align: left;
+	}
+	&__subtitle {
+		color: #fff;
+		position: relative;
+		z-index: 2;
+		padding-left: 10px;
+		text-align: left;
+	}
+	&__subtitle:before {
+		content: '';
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		border-radius: 100%;
+		background: #0f5385;
+		z-index: -1;
+		top: -27%;
+		left: 0;
+	}
+	&__btns {
+		margin-top: 25px;
+		display: flex;
+		width: 250px;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__link {
+		color: #fff;
+		font-weight: 700;
+	}
+	&__link:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}

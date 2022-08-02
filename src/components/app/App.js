@@ -1,12 +1,8 @@
-import logo from '../../resources/logo.svg';
-import './App.css';
-
+import Promo from '../promo/Promo';
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-			</header>
+		<div className="app">
+			<Promo></Promo>
 		</div>
 	);
 }
