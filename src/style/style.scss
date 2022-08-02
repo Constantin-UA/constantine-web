@@ -21,9 +21,9 @@ body {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	color: $main-color;
-	text-align: center;
-	background-color: #fff;
+	color: $text-color;
+	text-align: left;
+	background-color: $bg-color;
 }
 ul,
 li,
@@ -107,6 +107,43 @@ code {
 	&_fz48 {
 		font-size: 48px;
 	}
+}
+.title__section-title {
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+.title__section-title:before {
+	content: '';
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	background: #0f5385;
+	z-index: -1;
+	top: -27%;
+	left: 0;
+}
+.title__section-title:before {
+	left: 50%;
+	transform: translateX(-50%);
+	top: -20%;
+}
+.title__section-subtitle {
+	position: relative;
+	text-align: center;
+}
+.title__section-subtitle:before {
+	content: '';
+	position: absolute;
+	width: 60px;
+	border: 2px solid #0f5385;
+}
+.title__section-subtitle:before {
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	margin-top: 25px;
 }
 .btn {
 	background-color: $main-color;

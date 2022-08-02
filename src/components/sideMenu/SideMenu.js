@@ -19,27 +19,24 @@ function SideMune() {
 					<Offcanvas.Title>Menu</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
-					<ul class="menu__list">
-						<li class="menu__link">
-							<a href="#about">ПРО МЕНЯ</a>
+					<ul className="menu__list">
+						<li className="menu__link">
+							<a href="#aboutme">ПРО МЕНЯ</a>
 						</li>
-						<li class="menu__link">
+						<li className="menu__link">
 							<a href="#resume">МОЙ ОПЫТ</a>
 						</li>
-						<li class="menu__link">
+						<li className="menu__link">
 							<a href="#skills">МОИ НАВЫКИ</a>
 						</li>
-						<li class="menu__link">
+						<li className="menu__link">
 							<a href="#portfolio">МОИ РАБОТЫ</a>
 						</li>
-						<li class="menu__link">
-							<a href="#price">ПРАЙС-ЛИСТ</a>
-						</li>
-						<li class="menu__link">
+						<li className="menu__link">
 							<a href="#contacts">КОНТАКТЫ</a>
 						</li>
 					</ul>
-					<div class="menu__social">
+					<div className="menu__social">
 						<a href="#">
 							<svg
 								width="20"

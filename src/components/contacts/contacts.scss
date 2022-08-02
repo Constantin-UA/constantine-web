@@ -1,0 +1,125 @@
+@import '../../style/variables.scss';
+
+.contacts {
+	padding-top: 60px;
+	padding-bottom: 90px;
+}
+.contacts__wrapper {
+	display: grid;
+	grid-template-columns: 400px 585px;
+	justify-content: space-evenly;
+}
+.contacts__photo img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.contacts__subtitle {
+	position: relative;
+	padding-left: 11px;
+	margin-top: 5px;
+	z-index: 2;
+}
+.contacts__subtitle:before {
+	content: '';
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	background: $main-color;
+	z-index: -1;
+	top: -27%;
+	left: 0;
+}
+.contacts__subtitle:before {
+	left: -2px;
+}
+.contacts__title_main {
+	position: relative;
+	z-index: 2;
+	margin-bottom: 30px;
+}
+.contacts__title_main:before {
+	content: '';
+	position: absolute;
+	width: 60px;
+	border: 2px solid $main-color;
+}
+.contacts__title_main:before {
+	top: 100%;
+}
+.contacts__social,
+.contacts__text {
+	margin-top: 20px;
+}
+.contacts__link {
+	margin-right: 25px;
+}
+.contacts__link img {
+	max-width: 30px;
+	max-height: 30px;
+}
+.contacts__form {
+	margin-top: 30px;
+	display: grid;
+	grid-template: 45px 190px 45px / repeat(2, 280px);
+	justify-content: space-between;
+	row-gap: 30px;
+}
+.contacts__form label {
+	display: block;
+	position: absolute;
+	height: 18px;
+	padding: 0 8px;
+	background-color: #fff;
+	font-size: 12px;
+	margin-bottom: 0;
+	top: -9px;
+	left: 12px;
+}
+.contacts__triggers {
+	grid-column: 1/3;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	-moz-column-gap: 35px;
+	column-gap: 35px;
+}
+.contacts__policy {
+	font-size: 12px;
+	line-height: 14px;
+	display: flex;
+	align-items: center;
+}
+.contacts__policy input {
+	margin-right: 10px;
+}
+.contacts__input {
+	position: relative;
+}
+.contacts__input input {
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	font-size: 12px;
+	font-weight: 500;
+}
+.contacts__textarea {
+	position: relative;
+	grid-column: 1/3;
+}
+.contacts__textarea textarea {
+	resize: none;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	font-size: 12px;
+	font-weight: 500;
+}
+.contacts__btn {
+	border: none;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+	color: #fff;
+}
