@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 
-import testPhoto from '../../resources/pictures/test_photo.png';
+import testPhoto from '../../resources/pictures/dog.jpg';
 import design from '../../resources/about_me/design.svg';
 import mobile from '../../resources/about_me/mobile_dev.svg';
 import web from '../../resources/about_me/web_development.svg';
@@ -14,7 +14,7 @@ const AboutMe = () => {
 		<section id="aboutme" className="aboutme">
 			<Container className="aboutme__wrapper">
 				<Stack direction="horizontal" gap={5}>
-					<Col md="auto">
+					<Col>
 						<div className="aboutme__block">
 							<img id="about_photo" src={testPhoto} alt="My aboutPhoto"></img>
 						</div>
@@ -27,7 +27,7 @@ const AboutMe = () => {
 									<h2 className="title title_fz36 aboutme__title_main">Меня зовут Константин</h2>
 									<p className="aboutme__descr">
 										"Если хочешь подумать о чем-либо, то лучше всего думать об этом так, как думает
-										оно само".
+										про себя оно само".
 										<br />
 										Именно такой подход я применяю в жизни. Здравствуй, читатель! Если ты сейчас
 										читаешь это, то, наверное, тебе интересно узнать о человеке, которому ты хочешь

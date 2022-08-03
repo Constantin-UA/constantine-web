@@ -1,4 +1,4 @@
-import contactPhoto from '../../resources/pictures/test_photo.png';
+import contactPhoto from '../../resources/pictures/dog.jpg';
 import facebookIcon from '../../resources/social/facebook30.svg';
 import telegram from '../../resources/social/telegram.svg';
 import instagram from '../../resources/social/instagram30.svg';

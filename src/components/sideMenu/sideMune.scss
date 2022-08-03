@@ -9,7 +9,7 @@
 .menu {
 	&__list {
 		list-style-type: none;
-		padding-left: 35px;
+		text-align: center;
 	}
 	&__link {
 		position: relative;
@@ -21,7 +21,7 @@
 	&__link:before {
 		content: '';
 		position: absolute;
-		left: -35px;
+		left: 15px;
 		top: 10px;
 		height: 15px;
 		width: 15px;
@@ -35,16 +35,5 @@
 	&__link a {
 		color: #fff;
 		text-decoration: none;
-	}
-	&__social {
-		position: absolute;
-		bottom: 50px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 90px;
-		height: 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
 }

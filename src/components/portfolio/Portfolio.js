@@ -1,9 +1,9 @@
-import img_1 from '../../resources/portfolio/1.jpg';
-import img_2 from '../../resources/portfolio/2.jpg';
-import img_3 from '../../resources/portfolio/3.jpg';
-import img_4 from '../../resources/portfolio/4.png';
-import img_5 from '../../resources/portfolio/5.jpg';
-import img_6 from '../../resources/portfolio/6.jpg';
+import img_1 from '../../resources/portfolio/lionfish.png';
+import img_2 from '../../resources/portfolio/lionfish.png';
+import img_3 from '../../resources/portfolio/lionfish.png';
+import img_4 from '../../resources/portfolio/lionfish.png';
+import img_5 from '../../resources/portfolio/lionfish.png';
+import img_6 from '../../resources/portfolio/lionfish.png';
 
 import './portfolio.scss';
 const Portfolio = () => {

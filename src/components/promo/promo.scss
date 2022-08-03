@@ -8,11 +8,11 @@
 	&__title {
 		width: 535px;
 		margin-top: 10px;
-		color: #fff;
+		color: $text-color;
 		text-align: left;
 	}
 	&__subtitle {
-		color: #fff;
+		color: $text-color;
 		position: relative;
 		z-index: 2;
 		padding-left: 10px;
@@ -24,16 +24,12 @@
 		width: 36px;
 		height: 36px;
 		border-radius: 100%;
-		background: #0f5385;
+		background: $main-color;
 		z-index: -1;
 		top: -27%;
 		left: 0;
 	}
 	&__btns {
 		margin-top: 25px;
-		display: flex;
-		width: 250px;
-		justify-content: space-between;
-		align-items: center;
 	}
 }
