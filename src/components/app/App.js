@@ -12,9 +12,6 @@ function App() {
 			<Promo></Promo>
 			<AboutMe></AboutMe>
 			<Resume></Resume>
-			<Skills></Skills>
-			<Portfolio></Portfolio>
-			<Contacts></Contacts>
 		</div>
 	);
 }

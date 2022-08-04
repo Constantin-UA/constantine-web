@@ -5,10 +5,8 @@
 }
 .resume__wrapper {
 	padding: 85px 65px 0 65px;
-	display: grid;
-	grid-template-columns: repeat(2, 425px);
-	-moz-column-gap: 135px;
-	column-gap: 135px;
+	display: flex;
+	column-gap: 5%;
 }
 .resume__column-title {
 	position: relative;

@@ -23,21 +23,23 @@ const AboutMe = () => {
 						<Stack gap={4}>
 							<Row>
 								<div className="aboutme__block">
-									<div className="title title_fz16 aboutme__subtitle">Про меня</div>
-									<h2 className="title title_fz36 aboutme__title_main">Меня зовут Константин</h2>
+									<div className="title title_fz16 aboutme__subtitle">About me</div>
+									<h2 className="title title_fz36 aboutme__title_main">My name is Konstantin</h2>
 									<p className="aboutme__descr">
-										"Если хочешь подумать о чем-либо, то лучше всего думать об этом так, как думает
-										про себя оно само".
+										"If you want to think about something, it's best to think about it the way he
+										thinks it speaks for itself".
 										<br />
-										Именно такой подход я применяю в жизни. Здравствуй, читатель! Если ты сейчас
-										читаешь это, то, наверное, тебе интересно узнать о человеке, которому ты хочешь
-										предложить разделить с стобой увлекательное путешествие в мир web-разработки и
-										воплотить свою идею или, быть может, мечту в реальность. Проявить, создать,
-										материлозовать свой проэкт на просторах интернета.
-										<br />Я web-разработчик. Мой путь в эту профессию стартовал еще с детсва, когда
-										я впервые познакомился с компьютером. Это был далекий 1999г. И с тех самых пор
-										моя страсть к языкам общения с машинами только усиливалась. Чем конкретно я
-										занимаюсь? Об этом немного подробне:
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet nam, quos, et
+										voluptas illum delectus, vel quod sed eveniet beatae laboriosam quaerat non
+										molestias facilis nulla. Dolore saepe est ad sint ab, repudiandae cumque minima
+										quaerat reiciendis quis nam libero dolor quisquam voluptatibus a ipsum?
+										Cupiditate dolor soluta fuga harum sed molestiae aliquid delectus impedit.
+										Quisquam iure consequatur magnam omnis!
+										<br />
+										My path to development started from childhood, when I first got acquainted with
+										the computer. It was way back in 1999. And since then, my passion for languages
+										of communication with machines has only intensified. What exactly do I do? A
+										little more about this:
 									</p>
 								</div>
 							</Row>
@@ -45,29 +47,29 @@ const AboutMe = () => {
 								<div className="aboutme__block aboutme__block_wrapper">
 									<div className="aboutme__block item">
 										<img className="aboutme__img" src={web} alt="web dev" />
-										<div className="aboutme__title">Web-разработка</div>
+										<div className="aboutme__title">Web-development</div>
 										<p className="aboutme__descr">
-											Процесс создания веб-сайта или веб-приложения. Основными этапами процесса
-											являются веб-дизайн, вёрстка страниц, программирование на стороне клиента и
-											сервера, а также конфигурирование веб-сервера.
+											The process of creating a website or web application. The main stages of the
+											process are web design, page layout, client and server side programming, and
+											web server configuration.
 										</p>
 									</div>
 									<div className="aboutme__block item">
 										<img className="aboutme__img" src={mobile} alt="mobile dev" />
-										<div className="aboutme__title">Разработка приложений</div>
+										<div className="aboutme__title">Application Development</div>
 										<p className="aboutme__descr">
-											Гибридные решения, которые позволяю открыть приложение с помощью мобильного
-											браузера. При этом полностью сохраняется функционал нативного приложения:
-											отправка push-уведомлений; работа в режиме офлайн; установка ярлыка (иконки)
-											на рабочий стол мобильного устройства, и пр.
+											Hybrid solutions that allow you to open the application using a mobile
+											browser. At the same time, the functionality of the native application is
+											fully preserved: sending push notifications; work offline; installation of a
+											shortcut (icon) on the desktop of a mobile device, etc.
 										</p>
 									</div>
 									<div className="aboutme__block item">
 										<img className="aboutme__img" src={design} alt="design" />
 										<div className="aboutme__title">UI/UX Design</div>
 										<p className="aboutme__descr">
-											Проектирование любых пользовательских интерфейсов в которых удобство
-											использования так же важно как и внешний вид.
+											Designing any user interfaces in which convenience Usage is just as important
+											as appearance.
 										</p>
 									</div>
 								</div>

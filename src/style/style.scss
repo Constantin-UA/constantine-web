@@ -85,69 +85,11 @@ p {
 	outline: 0 !important;
 }
 
-.title {
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 60px;
-	&_fz14 {
-		font-size: 14px;
-		line-height: 21px;
-	}
-	&_fz16 {
-		font-size: 16px;
-		line-height: 24px;
-	}
-	&_fz20 {
-		font-size: 20px;
-		line-height: 30px;
-	}
-	&_fz36 {
-		font-size: 36px;
-	}
-	&_fz48 {
-		font-size: 48px;
-	}
-}
-.title__section-title {
-	text-align: center;
-	position: relative;
-	z-index: 2;
-}
-.title__section-title:before {
-	content: '';
-	position: absolute;
-	width: 36px;
-	height: 36px;
-	border-radius: 100%;
-	background: $main-color;
-	z-index: -1;
-	top: -27%;
-	left: 0;
-}
-.title__section-title:before {
-	left: 50%;
-	transform: translateX(-50%);
-	top: -20%;
-}
-.title__section-subtitle {
-	position: relative;
-	text-align: center;
-}
-.title__section-subtitle:before {
-	content: '';
-	position: absolute;
-	width: 60px;
-	border: 2px solid $main-color;
-}
-.title__section-subtitle:before {
-	left: 50%;
-	transform: translateX(-50%);
-	top: 100%;
-	margin-top: 25px;
-}
 .btn {
 	background-color: $main-color;
 }
 .offcanvas {
 	background-color: $bg-color;
 }
+
+@import './media';
