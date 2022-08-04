@@ -8,18 +8,13 @@ import Contacts from '../contacts/Contacts';
 function App() {
 	return (
 		<div className="app">
-			<SideMenu></SideMenu>
-			<Promo></Promo>
-			<AboutMe></AboutMe>
-			<Resume></Resume>
+			<SideMenu />
+			<Promo />
+			<AboutMe />
+			<Resume />
+			<Skills />
 		</div>
 	);
 }
-const counters = document.querySelectorAll('.skills__ratings-counter'),
-	lines = document.querySelectorAll('.skills__ratings-line span');
-
-counters.forEach((item, i) => {
-	lines[i].style.width = item.innerHTML;
-});
 
 export default App;

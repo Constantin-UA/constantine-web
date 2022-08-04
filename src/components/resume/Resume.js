@@ -8,14 +8,14 @@ import Container from 'react-bootstrap/Container';
 import { Col } from 'react-bootstrap';
 
 const Resume = () => {
-	const classSection = {
-		title: 'title__section-title',
-		subtitle: 'title__section-subtitle',
+	const titleText = {
+		title: 'An experience',
+		subtitle: 'How can I be useful',
 	};
 	return (
 		<section id="resume" className="resume">
 			<Container>
-				<TitleCompon classSection={classSection} />
+				<TitleCompon titleText={titleText} />
 				<Container className="resume__wrapper">
 					<Col className="resume__column">
 						<h3 className="title title_fz20 resume__column-title">Education</h3>
