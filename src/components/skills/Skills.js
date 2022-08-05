@@ -1,18 +1,25 @@
-import html from '../../resources/skills/html5.svg';
-import css3 from '../../resources/skills/css3.svg';
-import js from '../../resources/skills/js.svg';
-import angular from '../../resources/skills/angular_skill.svg';
-import reactSkill from '../../resources/skills/react.svg';
-import nodeJs from '../../resources/skills/node.js.svg';
-import mongo from '../../resources/skills/mongo.db.svg';
+import html from '../../resources/icons/skills/html5.svg';
+import css3 from '../../resources/icons/skills/css3.svg';
+import js from '../../resources/icons/skills/js.svg';
+import angular from '../../resources/icons/skills/angular_skill.svg';
+import reactSkill from '../../resources/icons/skills/react.svg';
+import nodeJs from '../../resources/icons/skills/node.js.svg';
+import mongo from '../../resources/icons/skills/mongo.db.svg';
 import TitleCompon from '../titleCompon/TitleCompon';
 import { Container, Row, Card, ProgressBar } from 'react-bootstrap';
 
 import './skills.scss';
 const Skills = () => {
-	const titleText = {
-		title: 'Skills',
-		subtitle: 'What do I use at work?',
+	const data = {
+		title: {
+			text: 'Skills',
+			class: 'title title_fz16 title__section-title',
+			nummber: 4,
+		},
+		subtitle: {
+			text: 'What do I use at work?',
+			class: 'title title_fz36 title__section-subtitle',
+		},
 	};
 	const skillsData = [
 		{
@@ -54,7 +61,7 @@ const Skills = () => {
 	return (
 		<section id="skills" className="skills">
 			<Container>
-				<TitleCompon titleText={titleText} />
+				<TitleCompon data={data} />
 				<Container className="mt-5">
 					<Row lg={4} className="skills__wrapper">
 						{skillsData.map((item, idx) => {

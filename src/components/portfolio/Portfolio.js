@@ -1,7 +1,7 @@
-import firstImg from '../../resources/portfolio/lionfish.png';
-import secondImg from '../../resources/pictures/portfolio/1.jpg';
-import thirdImg from '../../resources/pictures/portfolio/2.jpg';
-import fourthImg from '../../resources/pictures/portfolio/3.jpg';
+import firstImg from '../../resources/pictures/portfolio/cat1-l.jpg';
+import secondImg from '../../resources/pictures/portfolio/pic1-s.jpg';
+import thirdImg from '../../resources/pictures/portfolio/pic1-xl.jpg';
+import fourthImg from '../../resources/pictures/portfolio/pic1-xxl.jpg';
 import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/esm/Container';
 import Carousel from 'react-bootstrap/Carousel';
@@ -34,24 +34,31 @@ const Portfolio = (props) => {
 				subtitle: 'This is my fourth win.',
 			},
 		],
-		titleText: {
-			title: 'Portfolio',
-			subtitle: 'My works',
+		data: {
+			title: {
+				text: 'Portfolio',
+				class: 'title title_fz16 title__section-title',
+				nummber: 5,
+			},
+			subtitle: {
+				text: 'My works',
+				class: 'title title_fz36 title__section-subtitle',
+			},
 		},
 	};
 
 	return (
 		<section id="portfolio" className="portfolio">
 			<Container>
-				<TitleCompon titleText={state.titleText} />
+				<TitleCompon data={state.data} />
 				<Carousel fade className="portfolio__carousel">
 					{state.items.map((item, i) => {
 						return (
-							<Carousel.Item interval={5000} className="portfolio__carousel_item">
-								<img className="d-block w-100" src={state.items[i].src} alt={state.items[i].alt} />
+							<Carousel.Item interval={5000} className="portfolio__carousel_item" key={i}>
+								<img className="d-block w-100" src={item.src} alt={item.alt} />
 								<Carousel.Caption>
-									<h3>{state.items[i].title}</h3>
-									<p>{state.items[i].subtitle}</p>
+									<h3>{item.title}</h3>
+									<p>{item.subtitle}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
 						);

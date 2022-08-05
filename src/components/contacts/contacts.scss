@@ -17,13 +17,13 @@
 	-o-object-fit: cover;
 	object-fit: cover;
 }
-.contacts__subtitle {
+.contacts__title {
 	position: relative;
 	padding-left: 11px;
 	margin-top: 5px;
 	z-index: 2;
 }
-.contacts__subtitle:before {
+.contacts__title:before {
 	content: '';
 	position: absolute;
 	width: 36px;
@@ -34,21 +34,21 @@
 	top: -27%;
 	left: 0;
 }
-.contacts__subtitle:before {
+.contacts__title:before {
 	left: -2px;
 }
-.contacts__title_main {
+.contacts__subtitle {
 	position: relative;
 	z-index: 2;
 	margin-bottom: 30px;
 }
-.contacts__title_main:before {
+.contacts__subtitle:before {
 	content: '';
 	position: absolute;
 	width: 60px;
 	border: 2px solid $main-color;
 }
-.contacts__title_main:before {
+.contacts__subtitle:before {
 	top: 100%;
 }
 .contacts__social,

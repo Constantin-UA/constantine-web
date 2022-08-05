@@ -7,7 +7,7 @@ const Promo = () => {
 		<section className="promo">
 			<Container>
 				<div className="title title_fz16 promo__subtitle">My name is Kostyantin</div>
-				<h1 className="title title_fz48 promo__title">I am web-developer from Dnipro city</h1>
+				<h1 className="title title_fz48 promo__title">Web-developer I am. From Ukraine.</h1>
 				<ButtonGroup aria-label="Buttons promo" className="promo__btns" size="sm">
 					<a href="#portfolio" className="btn btn-primary">
 						My works

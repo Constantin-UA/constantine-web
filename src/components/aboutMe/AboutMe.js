@@ -3,13 +3,25 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 
-import testPhoto from '../../resources/pictures/dog.jpg';
-import design from '../../resources/about_me/design.svg';
-import mobile from '../../resources/about_me/mobile_dev.svg';
-import web from '../../resources/about_me/web_development.svg';
+import TitleCompon from '../titleCompon/TitleCompon';
+import testPhoto from '../../resources/pictures/cat1-l.jpg';
+import design from '../../resources/icons/about_me/design.svg';
+import mobile from '../../resources/icons/about_me/mobile_dev.svg';
+import web from '../../resources/icons/about_me/web_development.svg';
 import './aboutMe.scss';
 
 const AboutMe = () => {
+	const data = {
+		title: {
+			text: 'About me',
+			class: 'title title_fz16 aboutme__title',
+			nummber: 2,
+		},
+		subtitle: {
+			text: 'My name is Konstantin.',
+			class: 'title title_fz36 aboutme__subtitle',
+		},
+	};
 	return (
 		<section id="aboutme" className="aboutme">
 			<Container className="aboutme__wrapper">
@@ -23,8 +35,7 @@ const AboutMe = () => {
 						<Stack gap={4}>
 							<Row>
 								<div className="aboutme__block">
-									<div className="title title_fz16 aboutme__subtitle">About me</div>
-									<h2 className="title title_fz36 aboutme__title_main">My name is Konstantin</h2>
+									<TitleCompon data={data} />
 									<p className="aboutme__descr">
 										"If you want to think about something, it's best to think about it the way he
 										thinks it speaks for itself".

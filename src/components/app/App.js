@@ -14,6 +14,7 @@ function App() {
 			<Resume />
 			<Skills />
 			<Portfolio />
+			<Contacts />
 		</div>
 	);
 }

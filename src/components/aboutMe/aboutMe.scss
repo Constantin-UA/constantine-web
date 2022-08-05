@@ -4,34 +4,34 @@
 	min-height: 600px;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	&__subtitle {
+	&__title {
 		position: relative;
 		padding-left: 11px;
 		z-index: 2;
 	}
-	&__subtitle:before {
+	&__title:before {
 		content: '';
 		position: absolute;
 		width: 36px;
 		height: 36px;
 		border-radius: 100%;
-		background: #0f5385;
+		background: $main-color;
 		z-index: -1;
 		top: -27%;
 		left: 0;
 	}
-	&__title_main {
+	&__subtitle {
 		position: relative;
 		z-index: 2;
 		margin-bottom: 20px;
 	}
-	&__title_main:before {
+	&__subtitle:before {
 		content: '';
 		position: absolute;
 		width: 60px;
-		border: 2px solid #0f5385;
+		border: 2px solid $main-color;
 	}
-	&__title_main:before {
+	&__subtitle:before {
 		top: 100%;
 	}
 	&__block .item {
@@ -62,7 +62,7 @@
 		width: 36px;
 		height: 36px;
 		border-radius: 100%;
-		background: #0f5385;
+		background: $main-color;
 		z-index: -1;
 		top: -27%;
 		left: 0;
@@ -83,14 +83,14 @@
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 18px;
-	color: #000;
+	color: $text-color;
 	margin-bottom: 0;
 }
 .aboutme__title {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 21px;
-	color: #000;
+	color: $text-color;
 }
 #about_photo {
 	width: 100%;

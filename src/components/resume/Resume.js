@@ -1,21 +1,28 @@
 import './resume.scss';
-import courses from '../../resources/resume/courses.svg';
-import designer from '../../resources/resume/designer.svg';
-import developer from '../../resources/resume/developer.svg';
-import university from '../../resources/resume/university.svg';
+import courses from '../../resources/icons/resume/courses.svg';
+import designer from '../../resources/icons/resume/designer.svg';
+import developer from '../../resources/icons/resume/developer.svg';
+import university from '../../resources/icons/resume/university.svg';
 import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/Container';
 import { Col } from 'react-bootstrap';
 
 const Resume = () => {
-	const titleText = {
-		title: 'An experience',
-		subtitle: 'How can I be useful',
+	const data = {
+		title: {
+			text: 'An experience',
+			class: 'title title_fz16 title__section-title',
+			nummber: 3,
+		},
+		subtitle: {
+			text: 'How can I be useful',
+			class: 'title title_fz36 title__section-subtitle',
+		},
 	};
 	return (
 		<section id="resume" className="resume">
 			<Container>
-				<TitleCompon titleText={titleText} />
+				<TitleCompon data={data} />
 				<Container className="resume__wrapper">
 					<Col className="resume__column">
 						<h3 className="title title_fz20 resume__column-title">Education</h3>
