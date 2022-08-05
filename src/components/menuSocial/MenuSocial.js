@@ -1,8 +1,29 @@
 import './menuSocial.scss';
-
-const MenuSocial = () => {
+import facebookIcon from '../../resources/icons/social/facebook30.svg';
+import githubIcon from '../../resources/icons/social/githubB.svg';
+import instagramIcon from '../../resources/icons/social/instagram30.svg';
+import telegramIcon from '../../resources/icons/social/telegram.svg';
+const MenuSocial = (props) => {
 	return (
-		<div className="menu__social">
+		<div className={props.data}>
+			<a href="#">
+				<img src={facebookIcon} alt="facebook link" />
+			</a>
+			<a href="#">
+				<img src={instagramIcon} alt="instagram link" />
+			</a>
+			<a href="#">
+				<img src={githubIcon} alt="github link" />
+			</a>
+			<a href="#">
+				<img src={telegramIcon} alt="telegram link" />
+			</a>
+		</div>
+	);
+};
+export default MenuSocial;
+
+/*
 			<a href="#">
 				<svg
 					width="20"
@@ -53,7 +74,4 @@ const MenuSocial = () => {
 					/>
 				</svg>
 			</a>
-		</div>
-	);
-};
-export default MenuSocial;
+*/

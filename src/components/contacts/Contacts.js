@@ -1,11 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import Stack from 'react-bootstrap/Stack';
 import contactPhoto from '../../resources/pictures/cat2-l.jpg';
-import facebookIcon from '../../resources/icons/social/facebook30.svg';
-import telegram from '../../resources/icons/social/telegram.svg';
-import instagram from '../../resources/icons/social/instagram30.svg';
+
 import TitleCompon from '../titleCompon/TitleCompon';
 import MenuSocial from '../menuSocial/MenuSocial';
 import './contacts.scss';
@@ -39,27 +39,37 @@ const Contacts = () => {
 									<div className="title title_fz14 contacts__text">
 										In any way convenient for you:
 									</div>
-									<MenuSocial />
+									<MenuSocial data={'contacts__social'} />
 									<div className="title title_fz14 contacts__text">
 										Or leave your details and I will write to you myself:
 									</div>
-									<form action="#" className="contacts__form" id="form">
-										<div className="contacts__input">
-											<input name="name" required type="text" id="name" />
-											<label htmlFor="name">Your name.</label>
-										</div>
-										<div className="contacts__input">
-											<input name="email" required type="email" id="email" />
-											<label htmlFor="email">Your email.</label>
-										</div>
-										<div className="contacts__textarea">
-											<textarea name="text" type="text" id="etext" cols="30" rows="10"></textarea>
-											<label htmlFor="text">Your message.</label>
-										</div>
+									<Form className="contacts__form">
+										<Form.Group controlId="formName" className="contacts__input">
+											<Form.Label>Name</Form.Label>
+											<Form.Control required type="text" placeholder="Enter your name here..." />
+										</Form.Group>
+
+										<Form.Group className="contacts__input" controlId="formEmail">
+											<Form.Label>Email</Form.Label>
+											<Form.Control required type="email" placeholder="Enter email here..." />
+										</Form.Group>
+
+										<Form.Group className="contacts__textarea" controlId="formText">
+											<Form.Label>Message</Form.Label>
+											<textarea
+												className="form-control"
+												name="text"
+												type="text"
+												id="messageInput"
+												cols="30"
+												rows="10"
+											></textarea>
+										</Form.Group>
+
 										<div className="contacts__triggers">
-											<button className="contacts__btn btn" type="submit">
+											<Button className="contacts__btn btn" type="submit">
 												Send message.
-											</button>
+											</Button>
 											<div className="contacts__policy">
 												<input required type="checkbox" className="contacts__policy-checkbox" />
 												<span>
@@ -67,7 +77,7 @@ const Contacts = () => {
 												</span>
 											</div>
 										</div>
-									</form>
+									</Form>
 								</div>
 							</Row>
 						</Stack>
@@ -80,6 +90,7 @@ const Contacts = () => {
 export default Contacts;
 
 /*
+ <a href="/policy.html"> /a>
 <div className="contacts__wrapper">
 					<div className="contacts__photo">
 						<img src={contactPhoto} alt="contact" />

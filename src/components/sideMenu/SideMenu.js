@@ -21,7 +21,7 @@ function SideMune() {
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<Menu />
-					<MenuSocial />
+					<MenuSocial data={'menu__social'} />
 				</Offcanvas.Body>
 			</Offcanvas>
 		</>
@@ -35,9 +35,9 @@ const Menu = () => {
 		['#portfolio', 'MY WORKS'],
 		['#contacts', 'CONTACTS'],
 	];
-	let li = menuItems.map((item) => {
+	let li = menuItems.map((item, idx) => {
 		return (
-			<li className="menu__link">
+			<li className="menu__link" key={idx}>
 				<a href={item[0]}>{item[1]}</a>
 			</li>
 		);

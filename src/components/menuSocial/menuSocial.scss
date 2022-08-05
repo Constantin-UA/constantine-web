@@ -3,9 +3,17 @@
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 90px;
+	width: 150px;
 	height: 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.contacts__social {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	a {
+		margin-right: 15px;
+	}
 }
