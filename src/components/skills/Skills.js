@@ -64,13 +64,13 @@ const Skills = () => {
 				<TitleCompon data={data} />
 				<Container className="mt-5">
 					<Row lg={4} className="skills__wrapper">
-						{skillsData.map((item, idx) => {
+						{skillsData.map(({ imgUrl, title, text }, idx) => {
 							return (
 								<Card text="light" bg="primary" className="skills__item" key={idx}>
-									<Card.Img variant="top" src={item.imgUrl} className="skills__item-img" />
+									<Card.Img variant="top" src={imgUrl} className="skills__item-img" />
 									<Card.Body>
-										<Card.Title style={{ color: '#000' }}>{item.title}</Card.Title>
-										<Card.Text className="skills__item-descr">{item.text}</Card.Text>
+										<Card.Title style={{ color: '#000' }}>{title}</Card.Title>
+										<Card.Text className="skills__item-descr">{text}</Card.Text>
 									</Card.Body>
 								</Card>
 							);
@@ -112,15 +112,15 @@ const SkillRatings = () => {
 	];
 	return (
 		<div className="skills__ratings">
-			{data.map((item, idx) => {
+			{data.map(({ title, progress }, idx) => {
 				return (
 					<div className="skills__ratings-item" key={idx}>
-						<div className="title title_fz14 skills__ratings-title">{item.title}</div>
-						<div className="skills__ratings-counter">{item.progress}%</div>
+						<div className="title title_fz14 skills__ratings-title">{title}</div>
+						<div className="skills__ratings-counter">{progress}%</div>
 						<ProgressBar
 							variant="warning"
 							animated
-							now={item.progress}
+							now={progress}
 							className="skills__ratings-line"
 						/>
 					</div>

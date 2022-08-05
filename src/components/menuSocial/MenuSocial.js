@@ -3,9 +3,9 @@ import facebookIcon from '../../resources/icons/social/facebook30.svg';
 import githubIcon from '../../resources/icons/social/githubB.svg';
 import instagramIcon from '../../resources/icons/social/instagram30.svg';
 import telegramIcon from '../../resources/icons/social/telegram.svg';
-const MenuSocial = (props) => {
+const MenuSocial = ({ data }) => {
 	return (
-		<div className={props.data}>
+		<div className={data}>
 			<a href="#">
 				<img src={facebookIcon} alt="facebook link" />
 			</a>

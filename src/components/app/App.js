@@ -5,7 +5,7 @@ import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
 import Portfolio from '../portfolio/Portfolio';
 import Contacts from '../contacts/Contacts';
-function App() {
+const App = () => {
 	return (
 		<div className="app">
 			<SideMenu />
@@ -17,6 +17,6 @@ function App() {
 			<Contacts />
 		</div>
 	);
-}
+};
 
 export default App;

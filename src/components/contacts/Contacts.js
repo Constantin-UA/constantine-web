@@ -1,3 +1,4 @@
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -54,19 +55,18 @@ const Contacts = () => {
 											<Form.Control required type="email" placeholder="Enter email here..." />
 										</Form.Group>
 
-										<Form.Group className="contacts__textarea" controlId="formText">
+										<Form.Group className="contacts__textarea-group">
 											<Form.Label>Message</Form.Label>
-											<textarea
-												className="form-control"
-												name="text"
-												type="text"
-												id="messageInput"
+											<Form.Control
+												className="contacts__textarea"
+												as="textarea"
 												cols="30"
 												rows="10"
-											></textarea>
+												placeholder="Leave a message here..."
+											/>
 										</Form.Group>
 
-										<div className="contacts__triggers">
+										<Form.Group className="contacts__triggers">
 											<Button className="contacts__btn btn" type="submit">
 												Send message.
 											</Button>
@@ -76,7 +76,7 @@ const Contacts = () => {
 													I agree <a href="/policy.html"> with the privacy policy</a>
 												</span>
 											</div>
-										</div>
+										</Form.Group>
 									</Form>
 								</div>
 							</Row>

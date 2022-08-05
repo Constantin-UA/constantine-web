@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import MenuSocial from '../menuSocial/MenuSocial';
 import './sideMune.scss';
-function SideMune() {
+const SideMune = () => {
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
@@ -17,7 +17,7 @@ function SideMune() {
 
 			<Offcanvas show={show} onHide={handleClose}>
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title>Menu</Offcanvas.Title>
+					<Offcanvas.Title>Navigate</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<Menu />
@@ -26,7 +26,7 @@ function SideMune() {
 			</Offcanvas>
 		</>
 	);
-}
+};
 const Menu = () => {
 	const menuItems = [
 		['#aboutme', 'ABOUT'],

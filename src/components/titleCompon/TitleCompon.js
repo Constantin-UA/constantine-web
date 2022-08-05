@@ -1,11 +1,11 @@
 import './titleCompon.scss';
 import parse from 'html-react-parser';
-const TitleCompon = (props) => {
-	let htmlStr = `<h${props.data.title.nummber} className="${props.data.title.class}">${props.data.title.text}</h${props.data.title.nummber}>`;
+const TitleCompon = ({ data }) => {
+	let htmlStr = `<h${data.title.nummber} className="${data.title.class}">${data.title.text}</h${data.title.nummber}>`;
 	return (
 		<>
 			{parse(htmlStr)}
-			<div className={props.data.subtitle.class}>{props.data.subtitle.text}</div>
+			<div className={data.subtitle.class}>{data.subtitle.text}</div>
 		</>
 	);
 };

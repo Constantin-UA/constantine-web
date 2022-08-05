@@ -6,7 +6,7 @@ import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/esm/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import './portfolio.scss';
-const Portfolio = (props) => {
+const Portfolio = () => {
 	const state = {
 		items: [
 			{
@@ -52,13 +52,13 @@ const Portfolio = (props) => {
 			<Container>
 				<TitleCompon data={state.data} />
 				<Carousel fade className="portfolio__carousel">
-					{state.items.map((item, i) => {
+					{state.items.map(({ src, alt, title, subtitle }, i) => {
 						return (
 							<Carousel.Item interval={5000} className="portfolio__carousel_item" key={i}>
-								<img className="d-block w-100" src={item.src} alt={item.alt} />
+								<img className="d-block w-100" src={src} alt={alt} />
 								<Carousel.Caption>
-									<h3>{item.title}</h3>
-									<p>{item.subtitle}</p>
+									<h3>{title}</h3>
+									<p>{subtitle}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
 						);
