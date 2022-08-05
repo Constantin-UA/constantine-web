@@ -59,7 +59,7 @@ const Skills = () => {
 					<Row lg={4} className="skills__wrapper">
 						{skillsData.map((item, idx) => {
 							return (
-								<Card text="light" bg="primary" className="skills__item">
+								<Card text="light" bg="primary" className="skills__item" key={idx}>
 									<Card.Img variant="top" src={item.imgUrl} className="skills__item-img" />
 									<Card.Body>
 										<Card.Title style={{ color: '#000' }}>{item.title}</Card.Title>
@@ -105,9 +105,9 @@ const SkillRatings = () => {
 	];
 	return (
 		<div className="skills__ratings">
-			{data.map((item) => {
+			{data.map((item, idx) => {
 				return (
-					<div className="skills__ratings-item">
+					<div className="skills__ratings-item" key={idx}>
 						<div className="title title_fz14 skills__ratings-title">{item.title}</div>
 						<div className="skills__ratings-counter">{item.progress}%</div>
 						<ProgressBar
