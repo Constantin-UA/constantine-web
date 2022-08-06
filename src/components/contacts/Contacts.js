@@ -1,4 +1,3 @@
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,7 +14,7 @@ const Contacts = () => {
 	const data = {
 		title: {
 			text: 'An experience',
-			class: 'title title_fz16 contacts__title',
+			class: 'title title_fz24 contacts__title',
 			nummber: 6,
 		},
 		subtitle: {
@@ -25,64 +24,60 @@ const Contacts = () => {
 	};
 	return (
 		<section id="contacts" className="contacts">
-			<Container>
-				<Stack direction="horizontal" gap={5}>
-					<Col>
-						<div className="contacts__photo">
-							<img id="contacts_photo" src={contactPhoto} alt="My aboutPhoto"></img>
-						</div>
-					</Col>
-					<Col>
-						<Stack gap={4}>
-							<Row>
-								<div className="contacts__descr">
-									<TitleCompon data={data} />
-									<div className="title title_fz14 contacts__text">
-										In any way convenient for you:
-									</div>
-									<MenuSocial data={'contacts__social'} />
-									<div className="title title_fz14 contacts__text">
-										Or leave your details and I will write to you myself:
-									</div>
-									<Form className="contacts__form">
-										<Form.Group controlId="formName" className="contacts__input">
-											<Form.Label>Name</Form.Label>
-											<Form.Control required type="text" placeholder="Enter your name here..." />
-										</Form.Group>
-
-										<Form.Group className="contacts__input" controlId="formEmail">
-											<Form.Label>Email</Form.Label>
-											<Form.Control required type="email" placeholder="Enter email here..." />
-										</Form.Group>
-
-										<Form.Group className="contacts__textarea-group">
-											<Form.Label>Message</Form.Label>
-											<Form.Control
-												className="contacts__textarea"
-												as="textarea"
-												cols="30"
-												rows="10"
-												placeholder="Leave a message here..."
-											/>
-										</Form.Group>
-
-										<Form.Group className="contacts__triggers">
-											<Button className="contacts__btn btn" type="submit">
-												Send message.
-											</Button>
-											<div className="contacts__policy">
-												<input required type="checkbox" className="contacts__policy-checkbox" />
-												<span>
-													I agree <a href="/policy.html"> with the privacy policy</a>
-												</span>
-											</div>
-										</Form.Group>
-									</Form>
+			<Container className="contacts__wrapper">
+				<Col>
+					<img className="contacts__photo" src={contactPhoto} alt="My aboutPhoto"></img>
+				</Col>
+				<Col>
+					<Stack gap={4}>
+						<Row>
+							<div className="contacts__descr">
+								<TitleCompon data={data} />
+								<div className="title title_fz14 contacts__text">
+									In any way convenient for you:
 								</div>
-							</Row>
-						</Stack>
-					</Col>
-				</Stack>
+								<MenuSocial data={'contacts__social'} />
+								<div className="title title_fz14 contacts__text">
+									Or leave your details and I will write to you myself:
+								</div>
+								<Form className="contacts__form">
+									<Form.Group controlId="formName" className="contacts__input">
+										<Form.Label>Name</Form.Label>
+										<Form.Control required type="text" placeholder="Enter your name here..." />
+									</Form.Group>
+
+									<Form.Group className="contacts__input" controlId="formEmail">
+										<Form.Label>Email</Form.Label>
+										<Form.Control required type="email" placeholder="Enter email here..." />
+									</Form.Group>
+
+									<Form.Group className="contacts__textarea-group">
+										<Form.Label>Message</Form.Label>
+										<Form.Control
+											className="contacts__textarea"
+											as="textarea"
+											cols="30"
+											rows="10"
+											placeholder="Leave a message here..."
+										/>
+									</Form.Group>
+
+									<Form.Group className="contacts__triggers">
+										<Button className="contacts__btn btn" type="submit">
+											Send message.
+										</Button>
+										<div className="contacts__policy">
+											<input required type="checkbox" className="contacts__policy-checkbox" />
+											<span>
+												I agree <a href="/policy.html"> with the privacy policy</a>
+											</span>
+										</div>
+									</Form.Group>
+								</Form>
+							</div>
+						</Row>
+					</Stack>
+				</Col>
 			</Container>
 		</section>
 	);

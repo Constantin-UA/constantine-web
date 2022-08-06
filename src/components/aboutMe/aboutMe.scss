@@ -4,6 +4,17 @@
 	min-height: 600px;
 	padding-top: 60px;
 	padding-bottom: 60px;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 5% 5%;
+	}
+	&__photo {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
 	&__title {
 		position: relative;
 		padding-left: 11px;
@@ -77,6 +88,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 20px;
+		margin-top: 20px;
 	}
 }
 .aboutme__descr {
@@ -88,13 +100,11 @@
 }
 .aboutme__title {
 	font-weight: 700;
-	font-size: 14px;
 	line-height: 21px;
 	color: $text-color;
 }
-#about_photo {
-	width: 100%;
-	height: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
+.ml-10 {
+	margin-left: 10px;
+	display: grid;
+	row-gap: 10px;
 }

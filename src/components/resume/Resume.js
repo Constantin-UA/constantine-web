@@ -11,7 +11,7 @@ const Resume = () => {
 	const data = {
 		title: {
 			text: 'An experience',
-			class: 'title title_fz16 title__section-title',
+			class: 'title title_fz24 title__section-title',
 			nummber: 3,
 		},
 		subtitle: {

@@ -6,6 +6,10 @@
 	&__carousel {
 		padding-top: 60px;
 		padding-bottom: 60px;
+		margin: 0 auto;
 		color: $text-color;
+		max-width: 600px;
+		height: 600px;
+		overflow: hidden;
 	}
 }

@@ -13,7 +13,7 @@ const Skills = () => {
 	const data = {
 		title: {
 			text: 'Skills',
-			class: 'title title_fz16 title__section-title',
+			class: 'title title_fz24 title__section-title',
 			nummber: 4,
 		},
 		subtitle: {

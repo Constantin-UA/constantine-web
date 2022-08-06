@@ -37,7 +37,7 @@ const Portfolio = () => {
 		data: {
 			title: {
 				text: 'Portfolio',
-				class: 'title title_fz16 title__section-title',
+				class: 'title title_fz24 title__section-title',
 				nummber: 5,
 			},
 			subtitle: {
@@ -49,13 +49,13 @@ const Portfolio = () => {
 
 	return (
 		<section id="portfolio" className="portfolio">
-			<Container>
+			<Container className="portfolio__wrapper">
 				<TitleCompon data={state.data} />
 				<Carousel fade className="portfolio__carousel">
 					{state.items.map(({ src, alt, title, subtitle }, i) => {
 						return (
-							<Carousel.Item interval={5000} className="portfolio__carousel_item" key={i}>
-								<img className="d-block w-100" src={src} alt={alt} />
+							<Carousel.Item className="portfolio__carousel_item" key={i}>
+								<img className="d-block w-100 h-100" src={src} alt={alt} />
 								<Carousel.Caption>
 									<h3>{title}</h3>
 									<p>{subtitle}</p>
