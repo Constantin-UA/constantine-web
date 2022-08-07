@@ -5,8 +5,9 @@ import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/esm/Container';
 import CarouselF from '../carousel/CarouselF';
 import './portfolio.scss';
-const Portfolio = () => {
-	const state = {
+import { Component } from 'react';
+class Portfolio extends Component {
+	state = {
 		items: [
 			{
 				srcImg: firstImg,
@@ -43,14 +44,16 @@ const Portfolio = () => {
 		},
 	};
 
-	return (
-		<section id="portfolio" className="portfolio">
-			<Container className="portfolio__wrapper">
-				<TitleCompon data={state.data} />
-				<CarouselF items={state.items} />
-			</Container>
-		</section>
-	);
-};
+	render() {
+		return (
+			<section id="portfolio" className="portfolio">
+				<Container className="portfolio__wrapper">
+					<TitleCompon data={this.state.data} />
+					<CarouselF items={this.state.items} />
+				</Container>
+			</section>
+		);
+	}
+}
 
 export default Portfolio;

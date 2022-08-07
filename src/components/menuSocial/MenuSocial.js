@@ -1,26 +1,31 @@
-import './menuSocial.scss';
 import facebookIcon from '../../resources/icons/social/facebook30.svg';
 import githubIcon from '../../resources/icons/social/githubB.svg';
 import instagramIcon from '../../resources/icons/social/instagram30.svg';
 import telegramIcon from '../../resources/icons/social/telegram.svg';
-const MenuSocial = ({ data }) => {
-	return (
-		<div className={data}>
-			<a href="#">
-				<img src={facebookIcon} alt="facebook link" />
-			</a>
-			<a href="#">
-				<img src={instagramIcon} alt="instagram link" />
-			</a>
-			<a href="#">
-				<img src={githubIcon} alt="github link" />
-			</a>
-			<a href="#">
-				<img src={telegramIcon} alt="telegram link" />
-			</a>
-		</div>
-	);
-};
+import { Component } from 'react';
+
+import './menuSocial.scss';
+
+class MenuSocial extends Component {
+	render() {
+		return (
+			<div className={this.props.classS}>
+				<a href="#">
+					<img src={facebookIcon} alt="facebook link" />
+				</a>
+				<a href="#">
+					<img src={instagramIcon} alt="instagram link" />
+				</a>
+				<a href="#">
+					<img src={githubIcon} alt="github link" />
+				</a>
+				<a href="#">
+					<img src={telegramIcon} alt="telegram link" />
+				</a>
+			</div>
+		);
+	}
+}
 export default MenuSocial;
 
 /*

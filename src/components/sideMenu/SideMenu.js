@@ -17,11 +17,11 @@ const SideMune = () => {
 
 			<Offcanvas show={show} onHide={handleClose}>
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title>Navigate</Offcanvas.Title>
+					<Offcanvas.Title>Greatings</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<Menu />
-					<MenuSocial data={'menu__social'} />
+					<MenuSocial classS={'menu__social'} />
 				</Offcanvas.Body>
 			</Offcanvas>
 		</>

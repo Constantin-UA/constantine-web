@@ -1,14 +1,18 @@
 import './titleCompon.scss';
 import parse from 'html-react-parser';
-const TitleCompon = ({ data }) => {
-	let htmlStr = `<h${data.title.nummber} className="${data.title.class}">${data.title.text}</h${data.title.nummber}>`;
-	return (
-		<>
-			{parse(htmlStr)}
-			<div className={data.subtitle.class}>{data.subtitle.text}</div>
-		</>
-	);
-};
+import { Component } from 'react';
+class TitleCompon extends Component {
+	render() {
+		const { title, subtitle } = this.props.data;
+		let htmlStr = `<h${title.nummber} className="${title.class}">${title.text}</h${title.nummber}>`;
+		return (
+			<>
+				{parse(htmlStr)}
+				<div className={subtitle.class}>{subtitle.text}</div>
+			</>
+		);
+	}
+}
 
 export default TitleCompon;
 

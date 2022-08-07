@@ -6,9 +6,9 @@ import university from '../../resources/icons/resume/university.svg';
 import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/Container';
 import { Col } from 'react-bootstrap';
-
-const Resume = () => {
-	const data = {
+import { Component } from 'react';
+class Resume extends Component {
+	state = {
 		title: {
 			text: 'An experience',
 			class: 'title title_fz24 title__section-title',
@@ -19,24 +19,26 @@ const Resume = () => {
 			class: 'title title_fz36 title__section-subtitle',
 		},
 	};
-	return (
-		<section id="resume" className="resume">
-			<Container>
-				<TitleCompon data={data} />
-				<Container className="resume__wrapper">
-					<Col className="resume__column">
-						<h3 className="title title_fz20 resume__column-title">Education</h3>
-						<PareOfLi direction={[0, 1]} />
-					</Col>
-					<Col className="resume__column">
-						<h3 className="title title_fz20 resume__column-title">Additionally</h3>
-						<PareOfLi direction={[2, 3]} />
-					</Col>
+	render() {
+		return (
+			<section id="resume" className="resume">
+				<Container>
+					<TitleCompon data={this.state} />
+					<Container className="resume__wrapper">
+						<Col className="resume__column">
+							<h3 className="title title_fz20 resume__column-title">Education</h3>
+							<PareOfLi direction={[0, 1]} />
+						</Col>
+						<Col className="resume__column">
+							<h3 className="title title_fz20 resume__column-title">Additionally</h3>
+							<PareOfLi direction={[2, 3]} />
+						</Col>
+					</Container>
 				</Container>
-			</Container>
-		</section>
-	);
-};
+			</section>
+		);
+	}
+}
 const PareOfLi = (props) => {
 	const data = [
 		{
