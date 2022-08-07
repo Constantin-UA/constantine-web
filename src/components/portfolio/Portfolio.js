@@ -1,37 +1,33 @@
-import firstImg from '../../resources/pictures/portfolio/cat1-l.jpg';
-import secondImg from '../../resources/pictures/portfolio/pic1-s.jpg';
-import thirdImg from '../../resources/pictures/portfolio/pic1-xl.jpg';
-import fourthImg from '../../resources/pictures/portfolio/pic1-xxl.jpg';
+import firstImg from '../../resources/pictures/portfolio/marvel-api.png';
+import secondImg from '../../resources/pictures/portfolio/coffee.png';
+import thirdImg from '../../resources/pictures/portfolio/iptracker.png';
 import TitleCompon from '../titleCompon/TitleCompon';
 import Container from 'react-bootstrap/esm/Container';
-import Carousel from 'react-bootstrap/Carousel';
+import CarouselF from '../carousel/CarouselF';
 import './portfolio.scss';
 const Portfolio = () => {
 	const state = {
 		items: [
 			{
-				src: firstImg,
+				srcImg: firstImg,
 				alt: 'First site',
-				title: 'First',
-				subtitle: 'This is my first win.',
+				title: 'Marvel API',
+				subtitle: 'Marvel Hero and comics',
+				siteUrl: 'http://marvel.constantine-web.space',
 			},
 			{
-				src: secondImg,
+				srcImg: secondImg,
 				alt: 'Second site',
-				title: 'Second',
-				subtitle: 'This is my second win.',
+				title: 'Coffee shop',
+				subtitle: 'Coffe shop',
+				siteUrl: 'http://coffee.constantine-web.space',
 			},
 			{
-				src: thirdImg,
+				srcImg: thirdImg,
 				alt: 'Third site',
-				title: 'Third',
-				subtitle: 'This is my third win.',
-			},
-			{
-				src: fourthImg,
-				alt: 'Fourth site',
-				title: 'Fourth',
-				subtitle: 'This is my fourth win.',
+				title: 'IP Adress tracker',
+				subtitle: 'Show on map ip addres',
+				siteUrl: 'http://ip.constantine-web.space',
 			},
 		],
 		data: {
@@ -51,19 +47,7 @@ const Portfolio = () => {
 		<section id="portfolio" className="portfolio">
 			<Container className="portfolio__wrapper">
 				<TitleCompon data={state.data} />
-				<Carousel fade className="portfolio__carousel">
-					{state.items.map(({ src, alt, title, subtitle }, i) => {
-						return (
-							<Carousel.Item className="portfolio__carousel_item" key={i}>
-								<img className="d-block w-100 h-100" src={src} alt={alt} />
-								<Carousel.Caption>
-									<h3>{title}</h3>
-									<p>{subtitle}</p>
-								</Carousel.Caption>
-							</Carousel.Item>
-						);
-					})}
-				</Carousel>
+				<CarouselF items={state.items} />
 			</Container>
 		</section>
 	);
