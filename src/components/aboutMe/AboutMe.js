@@ -43,6 +43,7 @@ class AboutMe extends Component {
 		],
 	};
 	render() {
+		const { title, subtitle, cardData } = this.state;
 		return (
 			<section id="aboutme" className="aboutme">
 				<Container className="aboutme__wrapper">
@@ -51,7 +52,7 @@ class AboutMe extends Component {
 					</Col>
 					<Col className="ml-10">
 						<Row className="aboutme__block">
-							<TitleCompon data={this.state} />
+							<TitleCompon title={title} subtitle={subtitle} />
 							<p className="aboutme__descr">
 								"If you want to think about something, it's best to think about it the way he thinks
 								it speaks for itself".
@@ -70,7 +71,7 @@ class AboutMe extends Component {
 							</p>
 						</Row>
 						<Row className="aboutme__block aboutme__block_wrapper">
-							<AboutCard cardData={this.state.cardData} />
+							<AboutCard cardData={cardData} />
 						</Row>
 					</Col>
 				</Container>

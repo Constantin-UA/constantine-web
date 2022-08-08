@@ -6,7 +6,8 @@ import reactSkill from '../../resources/icons/skills/react.svg';
 import nodeJs from '../../resources/icons/skills/node.js.svg';
 import mongo from '../../resources/icons/skills/mongo.db.svg';
 import TitleCompon from '../titleCompon/TitleCompon';
-import { Container, Row, Card, ProgressBar } from 'react-bootstrap';
+import SkillRating from '../skillRating/SkillRating';
+import { Container, Row, Card } from 'react-bootstrap';
 import { Component } from 'react';
 
 import './skills.scss';
@@ -61,13 +62,14 @@ class Skills extends Component {
 	};
 
 	render() {
+		const { title, subtitle, skillsData } = this.state;
 		return (
 			<section id="skills" className="skills">
 				<Container>
-					<TitleCompon data={this.state} />
+					<TitleCompon title={title} subtitle={subtitle} />
 					<Container className="mt-5">
 						<Row lg={4} className="skills__wrapper">
-							{this.state.skillsData.map(({ imgUrl, title, text }, idx) => {
+							{skillsData.map(({ imgUrl, title, text }, idx) => {
 								return (
 									<Card text="light" bg="primary" className="skills__item" key={idx}>
 										<Card.Img variant="top" src={imgUrl} className="skills__item-img" />
@@ -79,7 +81,7 @@ class Skills extends Component {
 								);
 							})}
 						</Row>
-						<SkillRatings />
+						<SkillRating />
 					</Container>
 				</Container>
 			</section>
@@ -87,66 +89,4 @@ class Skills extends Component {
 	}
 }
 
-const SkillRatings = () => {
-	const data = [
-		{
-			title: 'Website development',
-			progress: 90,
-		},
-		{
-			title: 'Application Creation',
-			progress: 84,
-		},
-		{
-			title: 'Working with data',
-			progress: 85,
-		},
-		{
-			title: 'Creativity',
-			progress: 91,
-		},
-		{
-			title: 'Design creation',
-			progress: 87,
-		},
-		{
-			title: 'Soft Skills',
-			progress: 83,
-		},
-	];
-	return (
-		<div className="skills__ratings">
-			{data.map(({ title, progress }, idx) => {
-				return (
-					<div className="skills__ratings-item" key={idx}>
-						<div className="title title_fz14 skills__ratings-title">{title}</div>
-						<div className="skills__ratings-counter">{progress}%</div>
-						<ProgressBar
-							variant="warning"
-							animated
-							now={progress}
-							className="skills__ratings-line"
-						/>
-					</div>
-				);
-			})}
-		</div>
-	);
-};
 export default Skills;
-
-/*
-<Card className="skills__item">
-<Card.Img variant="top" src={item.imgUrl} className="skills__item-img" />
-<Card.Body>
-	<Card.Title>{item.title}</Card.Title>
-	<Card.Text className="skills__item-descr">{item.text}</Card.Text>
-</Card.Body>
-</Card>
-
-			<div className="skills__ratings-item">
-				<div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-				<div className="skills__ratings-counter">90%</div>
-				<ProgressBar variant="warning" animated now={90} className="skills__ratings-line" />
-			</div>
-*/

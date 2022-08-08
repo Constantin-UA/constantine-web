@@ -8,6 +8,15 @@ import './portfolio.scss';
 import { Component } from 'react';
 class Portfolio extends Component {
 	state = {
+		title: {
+			text: 'Portfolio',
+			class: 'title title_fz24 title__section-title',
+			nummber: 5,
+		},
+		subtitle: {
+			text: 'My works',
+			class: 'title title_fz36 title__section-subtitle',
+		},
 		items: [
 			{
 				srcImg: firstImg,
@@ -31,25 +40,15 @@ class Portfolio extends Component {
 				siteUrl: 'http://ip.constantine-web.space',
 			},
 		],
-		data: {
-			title: {
-				text: 'Portfolio',
-				class: 'title title_fz24 title__section-title',
-				nummber: 5,
-			},
-			subtitle: {
-				text: 'My works',
-				class: 'title title_fz36 title__section-subtitle',
-			},
-		},
 	};
 
 	render() {
+		const { title, subtitle, items } = this.state;
 		return (
 			<section id="portfolio" className="portfolio">
 				<Container className="portfolio__wrapper">
-					<TitleCompon data={this.state.data} />
-					<CarouselF items={this.state.items} />
+					<TitleCompon title={title} subtitle={subtitle} />
+					<CarouselF items={items} />
 				</Container>
 			</section>
 		);

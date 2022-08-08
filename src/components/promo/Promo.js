@@ -1,12 +1,12 @@
 import Container from 'react-bootstrap/esm/Container';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Component from 'react';
+import { Component } from 'react';
 import './promo.scss';
 
 class Promo extends Component {
 	render() {
 		return (
-			<section className="promo">
+			<section id="promo" className="promo">
 				<Container>
 					<div className="title title_fz16 promo__subtitle">My name is Konstantin</div>
 					<h1 className="title title_fz48 promo__title">Web-developer I am. From Ukraine.</h1>
